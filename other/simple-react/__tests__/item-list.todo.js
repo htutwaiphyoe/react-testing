@@ -26,6 +26,22 @@
 //   for example: `expect('some text content').toMatch('text')`)
 //
 // For your second test, it will be very similar to the first.
+import React from "react"
+import ReactDOM from "react-dom"
+import ItemList from "../item-list"
+
+test("render no items where the itemlist is empty", () => {
+  const container = document.createElement("div")
+  ReactDOM.render(<ItemList items={[]} />, container)
+  expect(container.textContent).toMatch("no items")
+})
+
+test("render items where the itemlist is not empty", () => {
+  const container = document.createElement("div")
+  ReactDOM.render(<ItemList items={["Maii Khan", "Aye Thandar Naing"]}/>, container)
+  expect(container.textContent).toMatch("Maii Khan")
+  expect(container.textContent).toMatch("Aye Thandar Naing")
+})
 
 //////// Elaboration & Feedback /////////
 // When you've finished with the exercises:
