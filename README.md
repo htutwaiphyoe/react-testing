@@ -1,10 +1,8 @@
 # Testing React Application
 
-Course link [Frontendmasters](https://frontendmasters.com/courses/testing-react/)
-
 ## Table of Contents
 
-- [Topics covered](#topics-covered)
+- Topic covered
 
 ### Topics covered
 
